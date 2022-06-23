@@ -1,0 +1,11 @@
+{{> nav}}
+
+{{#if hasAny}}
+  <ul>
+    {{#each champs}}
+    Nombre: {{this.name}}
+    Apellido: {{this.lastName}}
+
+    {{/each}}
+  </ul>
+{{/if}}
