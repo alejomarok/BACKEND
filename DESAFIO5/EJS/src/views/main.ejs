@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <title>PAGINA INICIAL</title>
+</head>
+<body>
+    <h1 style="text-align:center;">CARGA TU PRODUCTO</h1>
+
+    <form style="text-align: center;" action="/productos" method="post">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Nombre</label>
+          <input type="text" placeholder="Nombre" name="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Precio</label>
+            <input type="number" placeholder="Precio" name="precio" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Imagen</label>
+            <input type="text" placeholder="Imagen" name="imagen" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+        <button  type="submit" value="Enviar" class="btn btn-primary">Enviar</button>
+      </form>
+      <a class="btn primary" href="/productos"><button>ver productos</button></a>
+</body>

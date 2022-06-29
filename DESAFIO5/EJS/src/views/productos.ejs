@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTA DE PRODUCTOS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 style="text-align:center;">VISTA DE PRODUCTOS</h1>
+
+    
+    
+    
+    <% if(productos.length) { %> 
+        <table class="table" style="text-align: center ;">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Imagen</th>
+              </tr>
+            </thead>
+        <% productos.map(producto => { %> 
+            <tbody>
+                <tr>
+                    <td><%= producto.nombre %></td>
+                    <td><%= producto.precio %></td>
+                    <td><img src="<%= producto.imagen %>" /></td>
+                  </tr>
+            </tbody>
+        <% }) %> 
+    </table>
+    <% } else { %> 
+        <p style="color: red;">No hay ningun producto cargado </p>
+    <% } %> 
+
+    <a class="btn primary" href="/"><button>volver al formulario</button></a>
+</body>
+</html>
+
+
+
+
