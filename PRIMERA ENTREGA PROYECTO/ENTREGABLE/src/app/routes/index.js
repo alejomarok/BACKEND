@@ -1,13 +1,19 @@
 const { Router } = require('express');
 const router = Router()
 const { getProductos,getProductoId,postProducto,putProducto,deleteProducto, } = require('../controllers/productosControllers')
+const { postCarrito, deleteCarrito, verCarrito, 
+    insertProductoByIdToCart, deleteProductoCarrito} = require('../controllers/carritoControllers')
 
 
 
 router.get('/api/productos', getProductos)
 router.get('/api/productos/:id', getProductoId)
 
-
+router.post('/carrito', postCarrito) 
+router.delete('/carrito/:id', deleteCarrito )
+router.get('/carrito/:id/productos', verCarrito)
+router.post('/carrito/:id/productos', insertProductoByIdToCart)
+router.delete('/carrito/:id/productos/:id_prod', deleteProductoCarrito)
 
 //modo admin
 const auth = (req, res, next)=>{
